@@ -6,7 +6,7 @@ import axios from 'axios'
 import '../../src/css/viewproduct.css'
 
 const ViewProducts = () => {
-    const URL="http://localhost:4001/viewproducts"
+    const URL="https://atul-project-1.onrender.com/viewproducts"
     const [product,setProduct]=useState([])
    
     const fetchData=async()=>{
