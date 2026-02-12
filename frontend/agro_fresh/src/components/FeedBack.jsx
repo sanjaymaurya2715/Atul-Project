@@ -3,10 +3,11 @@ import axios from "axios"
 import Swal from 'sweetalert2'
 import Header from "./Header"
 import Footer from "./Footer"
+import { backendUrl } from './connection'
 
 const FeedBack=()=>{
      const [feedback,setFeedBack]=useState({name:"",email:"",rating:"",remark:""})
-     const URL="http://localhost:4001/addFeedBack"
+     const URL=backendUrl+"/addFeedBack"
       const fetchData=(e)=> // e is event object passed by react 
     {
 

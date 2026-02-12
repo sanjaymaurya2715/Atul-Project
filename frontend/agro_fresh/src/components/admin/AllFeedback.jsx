@@ -2,9 +2,10 @@
 import axios from "axios"
 import { useState,useEffect } from "react"
 import FeedbackDetails from './FeedbackDetails'
+import { backendUrl } from '../connection'
 function AllFeedback() {
     const [feedback,setFeedback]=useState([])
-    const URL="http://localhost:4001/admin/allFeedback"
+    const URL=backendUrl+"/admin/allFeedback"
     const fetchData=async()=>{
               try{
 const serverResponse= await axios.get(URL)

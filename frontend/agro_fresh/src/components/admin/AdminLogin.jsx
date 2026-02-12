@@ -4,11 +4,12 @@ import Footer from "../Footer"
 import styles from '../../css/admin_login.module.css' 
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
+import { backendUrl } from '../connection'
 import axios from "axios";
 function AdminLogin() {
   const navigate=useNavigate()
     const [loginData,setLoginData]=useState({email:"",password:""})
-    const URL="http://localhost:4001/admin/AdminLogin"
+    const URL=backendUrl+"/admin/AdminLogin"
     const fetchData=(e)=>{
       setLoginData({...loginData,[e.target.name]:e.target.value})
   

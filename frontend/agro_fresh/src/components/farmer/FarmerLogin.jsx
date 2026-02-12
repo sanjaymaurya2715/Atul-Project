@@ -6,10 +6,11 @@ import Swal from 'sweetalert2'
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
 import axios from "axios";
+import { backendUrl } from '../connection';
 const FarmerLogin = () => {
   const navigate=useNavigate()
   const [loginData,setLoginData]=useState({email:"",password:""})
-  const URL="http://localhost:4001/farmer/FarmerLogin"
+  const URL=backendUrl+"/farmer/FarmerLogin"
   const fetchData=(e)=>{
     setLoginData({...loginData,[e.target.name]:e.target.value})
 

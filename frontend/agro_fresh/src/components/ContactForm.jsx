@@ -4,11 +4,12 @@ import axios from "axios"
 import Swal from 'sweetalert2'
 import Header from "./Header"
 import Footer from "./Footer"
+import { backendUrl } from './connection'
 
 function ContactForm() {
   const [contact,setContact]=useState({name:"",email:"",phone:"",question:""})
   const[loading,setLoading]=useState(false)
-  const URL="http://localhost:4001/addContact"
+  const URL=backendUrl+"/addContact"
 
   const fetchData=(e)=> // e is event object passed by react 
     {

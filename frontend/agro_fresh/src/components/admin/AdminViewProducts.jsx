@@ -3,10 +3,11 @@ import React from 'react'
 // import FarmerHeader from '../farmer/FarmerHeader.jsx'
 import { useState,useEffect } from "react"
 import axios from 'axios'
+import { backendUrl } from '../connection'
 import '../../css/viewproduct.css'
 
 const AdminViewProducts = () => {
-    const URL="http://localhost:4001/viewproducts"
+    const URL=backendUrl+"/viewproducts"
     const [product,setProduct]=useState([])
    
     const fetchData=async()=>{
@@ -40,7 +41,7 @@ catch(error){
     product.map((p)=>{
 return(
 <div  className='item-div' key={p._id}>
-    <img src={`http://localhost:4001/productPics/${p.productPic}`} alt="" />
+    <img src={`${backendUrl}/productPics/${p.productPic}`} alt="" />
     <h5>Product Name:{p.productName}</h5>
     <h5>Product Category:{p.productCategory}</h5>
     <h5>Farmer Name:{p.farmer.name}</h5>

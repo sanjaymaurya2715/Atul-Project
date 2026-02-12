@@ -1,9 +1,10 @@
 import axios from "axios"
 import { useState,useEffect } from "react"
 import ContactDetails from "./ContactDetails"
+import { backendUrl } from '../connection'
 function AllContacts() {
     const[contact,setContact]=useState([])
-    const URL="http://localhost:4001/admin/allContacts"
+    const URL=backendUrl+"/admin/allContacts"
     const fetchData= async()=>{
         try{
 const serverResponse= await axios.get(URL)

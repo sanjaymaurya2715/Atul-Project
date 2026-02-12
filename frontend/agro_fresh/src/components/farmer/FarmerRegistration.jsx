@@ -2,6 +2,7 @@ import axios from "axios"
 import Header from "../Header"
 import Footer from "../Footer"
 import { useState,useRef } from "react"
+import { backendUrl } from '../connection'
 const FarmerRegistration=()=>{
     const fileInputRef=useRef(null)
     const [regData,setRegData]=useState(
@@ -46,7 +47,7 @@ const submitData= async(e)=>{
             console.log(`${key}:`,value);
             
         }
-        const URL="http://localhost:4001/farmer/register"
+        const URL=backendUrl+"/farmer/register"
         try{
           const serverResponse=await axios.post(URL,formData)
           console.log(serverResponse.data.Message);

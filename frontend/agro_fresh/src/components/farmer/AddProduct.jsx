@@ -3,6 +3,7 @@ import FarmerHeader from './FarmerHeader'
 import "@fontsource/poppins"
 import { useState } from 'react'
 import axios from "axios"
+import { backendUrl } from '../connection'
 
 
 const AddProduct = () => {
@@ -47,7 +48,7 @@ const AddProduct = () => {
             console.log(`${key}:`,value);
             
         }
-        const URL="http://localhost:4001/farmer/addproduct"
+        const URL=backendUrl+"/farmer/addproduct"
        
          try{
           const serverResponse=await axios.post(URL,formData)

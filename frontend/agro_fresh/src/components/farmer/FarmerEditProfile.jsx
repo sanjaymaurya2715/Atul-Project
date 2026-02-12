@@ -4,10 +4,11 @@ import {useEffect,useState} from "react"
 import FarmerHeader from "./FarmerHeader.jsx"
 import "@fontsource/poppins"
 import { useNavigate } from 'react-router-dom'
+import { backendUrl } from '../connection'
 function FarmerEditProfile()
     {
        const storedData=JSON.parse(localStorage.getItem("farmer"))
-        const URL="http://localhost:4001/farmer/editProfile"
+        const URL=backendUrl+"/farmer/editProfile"
         const navigate=useNavigate()
         const [oldData,setOldData]=useState({name:storedData.name,city:storedData.city,address:storedData.city,phone:storedData.phone})
 const emailId=localStorage.getItem("emailKey")

@@ -2,10 +2,11 @@
 import FarmerHeader from './FarmerHeader'
 import { useState,useEffect } from "react"
 import axios from 'axios'
+import { backendUrl } from '../connection'
 import '../../css/viewproduct.css'
 
 const FarmerProducts = () => {
-    const URL="http://localhost:4001/farmer/myProduct"
+    const URL=backendUrl+"/farmer/myProduct"
     const farmerObj=JSON.parse(localStorage.getItem("farmer"))
     const [product,setProduct]=useState([])
    
@@ -39,7 +40,7 @@ catch(error){
     product.map((p)=>{
 return(
 <div  className='item-div' key={p._id}>
-    <img src={`http://localhost:4001/productPics/${p.productPic}`} alt="" />
+    <img src={`${backendUrl}/productPics/${p.productPic}`} alt="" />
     <h5>Product Name:{p.productName}</h5>
     <h5>Product Category:{p.productCategory}</h5>
     {/* <h5>Seller Name:{p.farmer.name}</h5>
