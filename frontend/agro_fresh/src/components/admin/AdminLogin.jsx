@@ -8,7 +8,7 @@ import axios from "axios";
 function AdminLogin() {
   const navigate=useNavigate()
     const [loginData,setLoginData]=useState({email:"",password:""})
-    const URL="http://localhost:4001/admin/AdminLogin"
+    const URL="https://atul-project.onrender.com/admin/AdminLogin"
     const fetchData=(e)=>{
       setLoginData({...loginData,[e.target.name]:e.target.value})
   
