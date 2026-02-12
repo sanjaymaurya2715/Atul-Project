@@ -1,1 +1,1 @@
-export const backendUrl = 'http://localhost:4001';
+export const backendUrl = 'https://atul-project-1.onrender.com';
