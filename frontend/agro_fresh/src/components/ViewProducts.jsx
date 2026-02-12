@@ -40,11 +40,7 @@ catch(error){
     product.map((p)=>{
 return(
 <div  className='item-div' key={p._id}>
-<<<<<<< HEAD
     <img src={`${backendUrl}/productPics/${p.productPic}`} alt="" />
-=======
-    <img src={`https://atul-project-1.onrender.com/productPics/${p.productPic}`} alt="" />
->>>>>>> b81d602dd74bd578fe48d532c192cfa334833aaa
     <h5>Product Name:{p.productName}</h5>
     <h5>Product Category:{p.productCategory}</h5>
     <h5>Seller Name:{p.farmer.name}</h5>
